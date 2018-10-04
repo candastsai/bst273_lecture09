@@ -18,6 +18,18 @@ args = parser.parse_args( )
 #how would you check the file that the script is doing what you expected
 print(args.data_file)
 
+fh = open(args.data_file)
+print ("the file handle is", fh)
+
+lines = 0
+words = 0
+chars = 0
+
+#read the filw line by line
+for line in fh:
+	print(line)
+	
+
 #-------------------------------------------------------------------------------
 # our code for analyzing the data
 #-------------------------------------------------------------------------------
