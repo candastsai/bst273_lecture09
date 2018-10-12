@@ -44,4 +44,13 @@ In class, here's what we came up with:
 5. Once we've read through the file, print the values of `lines`, `words`, and `bytes` to the screen
 6. Close the file
 
+
+
+
+
+
+
+
+
+
 ### Step 3: Start translating your plan into python syntax
