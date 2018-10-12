@@ -29,23 +29,6 @@ QUESTION 2:
 ----------
 $ git config --get remote.origin.url
 https://github.com/candastsai/bst273_lecture09.git
-
-or
-
-$ git remote show origin
-* remote origin
-  Fetch URL: https://github.com/candastsai/bst273_lecture09.git
-  Push  URL: https://github.com/candastsai/bst273_lecture09.git
-  HEAD branch: master
-  Remote branches:
-    master tracked
-    yt     tracked
-  Local branches configured for 'git pull':
-    master merges with remote master
-    yt     merges with remote yt
-  Local refs configured for 'git push':
-    master pushes to master (up to date)
-    yt     pushes to yt     (up to date)
 ----------
 
 QUESTION 3:
@@ -53,6 +36,8 @@ QUESTION 3:
 ----------
 $ git remote add kevin https://github.com/kescobo/bst273_lecture09.git
 ----------
+
+Question 4 a & b
 
 """
 
@@ -78,9 +63,9 @@ parser.add_argument(
 parser.add_argument(
 	"-c",
 	action ="store_true"
-
+)
 #-------------------------------------------------------------------------------
-# Are there other arguments we need? NO!!!
+# Are there other arguments we need?
 #-------------------------------------------------------------------------------
 
 args = parser.parse_args( )
@@ -102,6 +87,24 @@ for line in fh:
 #print(lines)
 #print(words)
 #print(chars)
+
+"""
+Question 5 (9 pts)
+
+"""
+
+if args.l:
+	print( lines )
+
+if args.w:
+	print( words )
+
+if args.c:
+	print( chars )
+
+if not args.l | args.w | args.c:
+	print( lines, words, chars)
+
 
 	# ## Question 4a (2 pts)
 	#
@@ -178,20 +181,3 @@ for line in fh:
 	#
 	# **Hint:** - even though this question is at the end of the homework script,
 	# you probably need to add some stuff to the beginning of the script too.
-
-"""
-Question 5 (9 pts)
-
-"""
-
-if args.l:
-	print( lines )
-
-if args.w:
-	print( words )
-
-if args.c:
-	print( chars )
-
-if not args.l args.w args.c:
-	print( lines, words, chars)
